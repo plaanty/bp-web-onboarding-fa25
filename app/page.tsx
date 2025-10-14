@@ -1,14 +1,9 @@
 'use client';
 
-import { FiHeart as HeartIcon } from 'react-icons/fi';
-import { GoPaperAirplane as ShareIcon } from 'react-icons/go';
-import { LuUserCircle as ProfileIcon } from 'react-icons/lu';
-import Image from 'next/image';
 import styles from './styles.module.css';
 import '../assets/global.css';
 import { useEffect, useState } from 'react';
 import Post from '@/components/post';
-import { supabase } from '@/supabase/client';
 import { getAllPosts } from '@/supabase/query';
 import { PostType } from '@/types/schema';
 
@@ -48,6 +43,7 @@ export default function Home() {
           postData.map(post => (
             <Post
               id={post.id}
+              key={post.id}
               username={post.username}
               text={post.text}
               date={post.date}

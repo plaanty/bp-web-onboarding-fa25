@@ -19,6 +19,7 @@ export default function Post({
 }: postProps) {
   return (
     <div>
+      <p>{id}</p>
       <div className={styles.topLine}>
         <p>{username}</p>
         <p>{date.toString()}</p>
