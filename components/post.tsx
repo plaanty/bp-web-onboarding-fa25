@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './styles.module.css';
 import '../assets/global.css';
 
@@ -12,11 +11,11 @@ interface postProps {
 }
 
 export default function Post({
-  id,
+  // id,
   username,
   text,
   date,
-  image,
+  // image,
   likeCount,
 }: postProps) {
   return (
